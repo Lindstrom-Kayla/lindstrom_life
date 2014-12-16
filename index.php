@@ -1,5 +1,6 @@
 <?php
 
+error_reporting(E_ALL);
 ini_set('display_errors', '1');
 session_start();
 
@@ -26,6 +27,10 @@ switch ($action) {
         include 'view/family/brita.php';
         break;
 
+    case 'comment' :
+        include 'view/comment.php';
+        break;
+    
     case 'changerole':
         $userid = (int) filter_input(INPUT_GET, 'userid', FILTER_SANITIZE_NUMBER_INT);
         $role = filter_input(INPUT_GET, 'role', FILTER_SANITIZE_STRING);
@@ -136,10 +141,6 @@ switch ($action) {
         
         $item = GetItemById($itemId);
         $comments = GetCommentsWithUsersForItem($itemId);
-        include 'view/recipes.php';
-        break;
-        
-    case 'recipes' :
         include 'view/recipes.php';
         break;
     

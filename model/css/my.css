@@ -102,6 +102,16 @@ p{
     font-family: Georgia, Verdana, Arial, Times, Times New Roman;
 }
 
+p.error{
+    color: red;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+p.sent{
+    color: green;
+    font-size: 1.5em;
+}
 footer{
     margin-top: 32%;
     margin-left: auto;
@@ -171,6 +181,13 @@ h1, h2, h3, h4, h5, h6{
 p{
     font-size: 0.8em;
 }
+p.error{
+    font-size: 1em;
+}
+
+p.sent{
+    font-size: 1em;
+}
 }
 
 @media screen and (max-device-width: 360px) and (min-device-width: 321px) and (orientation: portrait),
@@ -228,6 +245,13 @@ h1, h2, h3, h4, h5, h6{
 p{
     font-size: 0.8em;
 }
+p.error{
+    font-size: 1em;
+}
+
+p.sent{
+    font-size: 1em;
+}
 }
 
 
@@ -257,6 +281,13 @@ img.fampic{
 }
 footer{
     margin-top: 38%;
+}
+p.error{
+    font-size: 1em;
+}
+
+p.sent{
+    font-size: 1em;
 }
 }
 

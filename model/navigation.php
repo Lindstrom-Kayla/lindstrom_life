@@ -3,7 +3,7 @@
 
 function GetNavigationItems() {
     
-    $nav = array('home' => 'Home', 'family' => 'Family Tree', 'nils' => 'Nils', 'brita' => 'Brita', 'alina' => 'Alina', 'lars'=> 'Lars', 'erik' => 'Erik', 'myra' => 'Myra', 'recipes' => 'Recipes', 'login' => 'Login');
+    $nav = array('home' => 'Home', 'family' => 'Family Tree', 'nils' => 'Nils', 'brita' => 'Brita', 'alina' => 'Alina', 'lars'=> 'Lars', 'erik' => 'Erik', 'myra' => 'Myra', 'comment' => 'Comments', 'login' => 'Login');
     
   
     return $nav;

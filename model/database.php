@@ -3,11 +3,11 @@
 $server = 'localhost';
 $dbname = 'lindstro_life';
 $dsn = 'mysql:host=' . $server . ';dbname=' . $dbname;
-$username = 'lindstro_user';
-$password = 'pa55word';
+$username = 'lindstro';
+$password = 'NewportTemple30!';
 
 try {
-    $link = new PDO($dsn, $username, $password);
+    $db = new PDO($dsn, $username, $password);
 } catch (PDOException $e) {
     $error_message = $e->getMessage();
     include('errors/db_error.php');
@@ -18,75 +18,96 @@ try {
 /// Doesn't return anything (since we aren't sure the query will return anything).
 /// $query - the sql statement to run.
 /// $params (array) - the parameters to bind to the query.
-function DbExecute($query, $params = null) {
+function DbExecute($query, $params = null)
+{
     global $db;
-    try {
+    try 
+    {
         $statement = $db->prepare($query);
-
-        if (is_array($params)) {
-            foreach ($params as $key => $value) {
+        
+        if (is_array($params))
+        {
+            foreach ($params as $key => $value)
+            {
                 $statement->bindValue($key, $value);
             }
         }
-
+        
         $statement->Execute();
-    } catch (Exception $e) {
+    }
+    catch (Exception $e)
+    {
         echo "Database exception, try again later.";
         error_log($e);
         exit();
     }
 }
-
 /// Runs an INSERT statement
 /// Returns the ID of the inserted item.
 /// $query - the sql statement to run.
 /// $params (array) - the parameters to bind to the query.
-function DbInsert($query, $params = null) {
+function DbInsert($query, $params = null)
+{
     global $db;
     $return = false;
-
-    try {
+    
+    try
+    {
         $statement = $db->prepare($query);
-
-        if (is_array($params)) {
-            foreach ($params as $key => $value) {
+        
+        if (is_array($params))
+        {
+            foreach ($params as $key => $value)
+            {
                 $statement->bindValue($key, $value);
             }
         }
-
+        
         $statement->Execute();
         $return = $db->lastInsertId();
-    } catch (Exception $e) {
+    }
+    catch (Exception $e)
+    {
         echo "Database insert exception, please try again later.";
         error_log($e);
         exit();
     }
-
+    
     return $return;
 }
-
 /// Runs a SELECT statement
 /// Returns an array containing the matching rows.
 /// $query - the sql statement to run.
 /// $params (array) - the parameters to bind to the query.
-function DbSelect($query, $params = null) {
+function DbSelect($query, $params = null)
+{
     global $db;
     $return = array();
-    try {
+    try 
+    {
         $statement = $db->prepare($query);
-        if (is_array($params)) {
-            foreach ($params as $key => $value) {
+        
+        if (is_array($params))
+        {
+            foreach ($params as $key => $value)
+            {
                 $statement->bindValue($key, $value);
             }
         }
+        
         $statement->Execute();
-
-        while ($row = $statement->fetch()) {
+        
+        while ($row = $statement->fetch())
+        {
             $return[] = $row;
         }
-    } catch (Exception $e) {
+    }
+    catch (Exception $e)
+    {
         echo "Database exception, try again later.";
         error_log($e);
         exit();
-    } return $return;
+    }
+    
+    return $return;
 }

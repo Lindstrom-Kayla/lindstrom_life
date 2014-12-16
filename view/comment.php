@@ -1,10 +1,9 @@
+<script src="/js/commentdetails.js" ></script>
 <div class="container">
         <main>
-            <h1>Recipes</h1>
-<p>Here will be my recipe database</p>
+            <h1>Family Discussion</h1>
+<p>Family will be able to get together and make comments to one another.</p>
         </main>
-
-    
     
     <?php foreach ($comments as $comment) : ?>
 		<div id="commentdiv">

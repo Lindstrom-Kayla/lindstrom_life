@@ -1,0 +1,7 @@
+function DeleteComment(comment) {
+	var confirmed = confirm("Are you sure you want to delete this comment?");
+	
+	if (confirmed) {
+		window.location = '/?action=deletecomment&comment=' + comment;
+	}
+}

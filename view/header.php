@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>Lindstrom Life</title>
         <link rel="stylesheet" type="text/css" href="/model/css/my.css">
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js" ></script>
     </head>
     
     <body>

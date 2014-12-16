@@ -150,7 +150,6 @@ function RegisterUser($first, $last, $email, $pass1, $pass2, &$message) {
 			$message .= "Password and Verify Password must match.";
 		}
 	}
-	
 	return $registered;
 }
 // check that names are at least 5 characters long
