@@ -30,7 +30,7 @@ function CheckSession() {
 /// Deletes a user from the database.
 /// $id - the Id of the user to delete.
 function DeleteUser($id) {
-    $query = 'DELETE FROM users WHERE Id=:id';
+    $query = 'DELETE FROM users WHERE ID=:id';
     DbExecute($query, array(':id' => $id));
 }
 

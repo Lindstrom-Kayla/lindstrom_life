@@ -26,22 +26,20 @@ if ($_POST['submit']) {
 <?php }if ($sent == true) { ?>
     <p class="sent"> Thank you, your email has been sent successfully.  We will do our best to reply within 24 hours.</p>
 <?php } ?>
+<main>
+    <form id="form" name="form" method="post" action="http://lindstromlife.com/index.php?action=contact">
+        <fieldset>
+            <legend>Contact Us</legend>
+            Name:<input type="text" name="name"/><br/><br/>
 
-<form id="form" name="form" method="post" action="http://lindstromlife.com/index.php?action=contact">
-    <fieldset>
-        <legend>Contact Us</legend>
-        <label for="name">Name: </label>
-        <input type="text" name="name"/><br/><br/>
+            Email:<input type="text" name="email"/><br/><br/>
 
-        <label for="email">Email: </label>
-        <input type="text" name="email"/><br/><br/>
+            Comments:<textarea name="comments" cols="20" rows="10"></textarea><br/><br/>
 
-        <label for="comments">Comments: </label>
-        <textarea name="comments" cols="20" rows="10"></textarea><br/><br/>
+            <input type="submit" name="submit" class="submit" value="submit"/>
 
-        <input type="submit" name="submit" class="submit" value="submit"/>
+        </fieldset>
+    </form>
 
-    </fieldset>
-</form>
-
-<div style="clear:both;"></div>
+    <div style="clear:both;"></div>
+</main>

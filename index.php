@@ -54,8 +54,9 @@ switch ($action) {
             DeleteUser($id);
         }
 
-        header('Location: /?action=editusers');
+        header('Location: /?action=editusers.php');
         exit();
+        break;
 
     case 'editusers':
         $page = (LoggedInUserIsAdmin()) ? 'view/editusers.php' : 'view/login.php';
@@ -135,9 +136,9 @@ switch ($action) {
             }
         }
 
-        $item = GetCommentById($Id);
-        $comments = GetCommentsWithUsersForItem($Id);
-        include 'view/comment.php';
+        $item = GetItemById($itemId);
+        $comments = GetCommentsWithUsersForItem($itemId);
+        include 'view/itemdetails.php';
         break;
 
     case 'registersubmit':

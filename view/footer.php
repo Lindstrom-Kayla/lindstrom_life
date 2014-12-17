@@ -15,7 +15,6 @@ $fnav = GetFootNavItems();
     </div>
 </footer>
 </div>
-</div>
 </body>
 </html>
 
