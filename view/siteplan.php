@@ -11,15 +11,16 @@
 <p>Lindstrom Life is a place to learn more about the Lindstrom's and share memories together.</p>
 
 <h3 class="two">Target Audience</h3>
+<p>My target audience are Lindstrom family members of all ages. Others are welcome to learn about the Lindstrom family.</p>
 
 <h4 class="three">Persona 1</h4>
-
+<img src="/images/male.jpg" alt="male persona">
 <p>Derek Cammoth teaches graphic design and has his own little business.  He is married and had five kids who no longer live at home.  He is 55 years old and has a Masters degree is Graphic Design.  He is very detial oriented and wants to be able to keep in touch with his family.  He spends a great portion of his day creating yearly family vidoes.</p>
 <p>He is computer savvy and confident in his computer skills.  He often uses his phone or iPad instead of the computer.</p>
 <p>"If my family is happy then I am happy." - Derek</p>
 
 <h4 class="three">Persona 2</h4>
-
+<img src="/images/female.jpg" alt="female persona">
 <p>Naomi Ithis is an artist and party planner.  She is married and has five kids.  She loves to keep in touch with her children and wishes they all still lived near her.  She is 50 years old and has a Bachelors Degree in Art.  She loves talking to her children and grand-children any chance she gets.</p>
 <p>She knows how to work a computer and basic navigation.  She mainly uses her iPad and iPhone to search the web.</p>
 <p>"Family is very important." - Naomi</p>
@@ -134,5 +135,3 @@
 
 <h3 class="two">Navigation</h3>
 <p>The navigation will be on the top of the page but below the site logo.  It will have a background color of light brown.  The text inside the navigation bar will be a dark brown.  When the mouse is on a link it will change the background dark and text light.</p>
-
-<h3 class="two">Responsiveness</h3>

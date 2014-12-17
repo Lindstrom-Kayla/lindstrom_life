@@ -1,5 +1,5 @@
 <?php
-    $nav = GetNavigationItems();
+$nav = GetNavigationItems();
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,16 +11,15 @@
         <link rel="stylesheet" type="text/css" href="/model/css/my.css">
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js" ></script>
     </head>
-    
     <body>
         <div class="page">
             <img class="logo" src="/images/lindLogo.jpg" alt="website logo" height="223" width="404">
             <nav>
                 <ul>
-                    <?php foreach($nav as $action => $text) : ?>
-                    <li>
-                        <a href='/index.php?action=<?php echo $action ?>'><?php echo $text ?></a>
-                    </li>
+                    <?php foreach ($nav as $action => $text) : ?>
+                        <li>
+                            <a href='/index.php?action=<?php echo $action ?>' title='<?php echo $text; ?>'><?php echo $text ?></a>
+                        </li>
                     <?php endforeach; ?>
                 </ul>
             </nav>

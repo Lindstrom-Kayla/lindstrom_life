@@ -7,22 +7,22 @@
     </head>
     <body>
         <div class="page">
-        <div class="container">
+            <div class="container">
 
-        <div id="main">
-            <h1>Database Error</h1>
-            <p>There was an error connecting to the database.</p>
-            <p>The database must be installed as described in the appendix.</p>
-            <p>Error message: <?php echo $error_message; ?></p>
-            <p>&nbsp;</p>
-        </div><!-- end main -->
+                <div id="main">
+                    <h1>Database Error</h1>
+                    <p>There was an error connecting to the database.</p>
+                    <p>The database must be installed as described in the appendix.</p>
+                    <p>Error message: <?php echo $error_message; ?></p>
+                    <p>&nbsp;</p>
+                </div><!-- end main -->
 
-        <div id="footer">
-            <p class="copyright">
-                &copy; <?php echo date("Y"); ?> Lindstrom Life, All Rights Reserved.
-            </p>
-        </div>
-        </div>
-    </div><!-- end page -->
-</body>
+                <div id="footer">
+                    <p class="copyright">
+                        &copy; <?php echo date("Y"); ?> Lindstrom Life, All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end page -->
+    </body>
 </html>
