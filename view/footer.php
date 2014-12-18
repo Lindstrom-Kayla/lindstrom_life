@@ -14,7 +14,7 @@ $fnav = GetFootNavItems();
         <p id="copy">&copy; <?php echo date('Y', getlastmod()); ?> lindstromlife.com, All rights reserved.</p>
     </div>
 </footer>
-</div>
+<?php ob_end_flush(); ?>
 </body>
 </html>
 

@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php
 $nav = GetNavigationItems();
 ?>
@@ -13,7 +14,7 @@ $nav = GetNavigationItems();
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js" ></script>
     </head>
     <body>
-        <div class="page">
+        <header>
             <img class="logo" src="/images/lindLogo.jpg" alt="website logo" height="223" width="404">
             <nav>
                 <ul>
@@ -24,3 +25,4 @@ $nav = GetNavigationItems();
                     <?php endforeach; ?>
                 </ul>
             </nav>
+        </header>

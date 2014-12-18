@@ -1,7 +1,8 @@
 <?php
 
+ini_set('output_buffering', 'On');
 error_reporting(E_ALL);
-ini_set('display_errors', '1');
+
 session_start();
 
 require 'model/database.php';
@@ -29,6 +30,7 @@ switch ($action) {
         break;
 
     case 'comment' :
+        $comments = GetOrderedComments();
         include 'view/comment.php';
         break;
 
@@ -43,7 +45,7 @@ switch ($action) {
         header('Location: /?action=editusers');
         exit();
 
-    case 'contact' :
+    case 'contact':
         include 'view/contact.php';
         break;
 
@@ -54,9 +56,8 @@ switch ($action) {
             DeleteUser($id);
         }
 
-        header('Location: /?action=editusers.php');
+        header('Location: /?action=editusers');
         exit();
-        break;
 
     case 'editusers':
         $page = (LoggedInUserIsAdmin()) ? 'view/editusers.php' : 'view/login.php';
@@ -98,6 +99,7 @@ switch ($action) {
     case 'logout':
         session_destroy();
         $_SESSION = array();
+        ob_start();
         header('Location: /');
         exit();
         break;
@@ -127,18 +129,14 @@ switch ($action) {
         break;
 
     case 'postcomment':
-        $itemId = (int) filter_input(INPUT_POST, 'itemId', FILTER_SANITIZE_NUMBER_INT);
         if ($userId = GetLoggedInUserId()) {
             $text = filter_input(INPUT_POST, 'comment', FILTER_SANITIZE_STRING);
 
-            if ($itemId && $text) {
-                SaveComment($itemId, $userId, $text);
+            if ($text) {
+                SaveComment($userId, $text);
             }
         }
-
-        $item = GetItemById($itemId);
-        $comments = GetCommentsWithUsersForItem($itemId);
-        include 'view/itemdetails.php';
+        include 'view/comment.php';
         break;
 
     case 'registersubmit':

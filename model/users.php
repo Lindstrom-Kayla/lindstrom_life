@@ -153,7 +153,7 @@ function RegisterUser($first, $last, $email, $pass1, $pass2, &$message) {
 
 // check that names are at least 5 characters long
 function ValidateNames($name, &$message) {
-    if (strlen($name) >= 5) {
+    if (strlen($name) >= 2) {
         return true;
     } else {
         $message .= "Name must be at least 5 characters long";
@@ -174,7 +174,7 @@ function ValidateEmail($email, &$message) {
 function ValidatePasswordLength($name, &$message) {
     // TODO: make sure password contains UPPERCASE, lowercase, numbers, and special chars.
 
-    if (strlen($name) >= 5) {
+    if (strlen($name) >= 2) {
         return true;
     } else {
         $message .= "Password must be at least 5 characters long";
