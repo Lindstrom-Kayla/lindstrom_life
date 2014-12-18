@@ -49,6 +49,16 @@ switch ($action) {
         include 'view/contact.php';
         break;
 
+    case 'deletecomment':
+        $id = (int) filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+        if (LoggedInUserIsAdmin() && $id) {
+            DeleteComment($id);
+        }
+
+        header('Location: /?action=editcomments');
+        exit();
+        
     case 'deleteuser':
         $id = (int) filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
@@ -58,6 +68,12 @@ switch ($action) {
 
         header('Location: /?action=editusers');
         exit();
+
+    case 'editcomments':
+        $page = (LoggedInUserIsAdmin()) ? 'view/editcomments.php' : 'view/login.php';
+        $comments = GetAllComments();
+        include $page;
+        break;
 
     case 'editusers':
         $page = (LoggedInUserIsAdmin()) ? 'view/editusers.php' : 'view/login.php';
@@ -134,6 +150,8 @@ switch ($action) {
 
             if ($text) {
                 SaveComment($userId, $text);
+                header('Location: /?action=comment');
+            exit();
             }
         }
         include 'view/comment.php';

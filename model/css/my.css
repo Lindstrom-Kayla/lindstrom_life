@@ -16,7 +16,9 @@ legend{
     font-family: Georgia, Verdana, Arial, Times, Times New Roman;
     font-weight: bold;
 }
-
+td{
+    padding-right: 2%;
+}
 button{
     border-style: outset;
     font-weight: bold;
